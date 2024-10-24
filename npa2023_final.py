@@ -68,44 +68,43 @@ while True:
 
 #     # check if the text of the message starts with the magic character "/" followed by your studentID and a space and followed by a command name
 #     #  e.g.  "/66070123 create"
-#     if message.find("<!!!REPLACEME!!!>") == 0:
+    if message.find("/65070147") == 0:
+        # extract the command
+        command = message[len("/65070147 "):].strip()
+        print(command)
 
-#         # extract the command
-#         command = <!!!REPLACEME!!!>
-#         print(command)
+# 5. Complete the logic for each command
 
-# # 5. Complete the logic for each command
-
-#         if command == "create":
-#             <!!!REPLACEME with code for create command!!!>     
-#         elif command == "delete":
-#             <!!!REPLACEME with code for delete command!!!>
-#         elif command == "enable":
-#             <!!!REPLACEME with code for enable command!!!>
-#         elif command == "disable":
-#             <!!!REPLACEME with code for disable command!!!>
-#         elif command == "status":
-#             <!!!REPLACEME with code for status command!!!>
-#         else:
-#             responseMessage = "Error: No command or unknown command"
+        if command == "create":
+            <!!!REPLACEME with code for create command!!!>     
+        elif command == "delete":
+            <!!!REPLACEME with code for delete command!!!>
+        elif command == "enable":
+            <!!!REPLACEME with code for enable command!!!>
+        elif command == "disable":
+            <!!!REPLACEME with code for disable command!!!>
+        elif command == "status":
+            <!!!REPLACEME with code for status command!!!>
+        else:
+            responseMessage = "Error: No command or unknown command"
         
-# # 6. Complete the code to post the message to the Webex Teams room.
+# 6. Complete the code to post the message to the Webex Teams room.
         
-#         # the Webex Teams HTTP headers, including the Authoriztion and Content-Type
-#         postHTTPHeaders = HTTPHeaders = {"Authorization": <!!!REPLACEME!!!>, "Content-Type": <!!!REPLACEME!!!>}
+        # the Webex Teams HTTP headers, including the Authoriztion and Content-Type
+        postHTTPHeaders = HTTPHeaders = {"Authorization": <!!!REPLACEME!!!>, "Content-Type": <!!!REPLACEME!!!>}
 
-#         # The Webex Teams POST JSON data
-#         # - "roomId" is is ID of the selected room
-#         # - "text": is the responseMessage assembled above
-#         postData = {"roomId": <!!!REPLACEME!!!>, "text": <!!!REPLACEME!!!>}
+        # The Webex Teams POST JSON data
+        # - "roomId" is is ID of the selected room
+        # - "text": is the responseMessage assembled above
+        postData = {"roomId": <!!!REPLACEME!!!>, "text": <!!!REPLACEME!!!>}
 
-#         # Post the call to the Webex Teams message API.
-#         r = requests.post(
-#             "<!!!REPLACEME with URL of Webex Teams Messages API!!!>",
-#             data=json.dumps(<!!!REPLACEME!!!>a),
-#             headers=<!!!REPLACEME!!!>,
-#         )
-#         if not r.status_code == 200:
-#             raise Exception(
-#                 "Incorrect reply from Webex Teams API. Status code: {}".format(r.status_code)
-#             )
+        # Post the call to the Webex Teams message API.
+        r = requests.post(
+            "<!!!REPLACEME with URL of Webex Teams Messages API!!!>",
+            data=json.dumps(<!!!REPLACEME!!!>a),
+            headers=<!!!REPLACEME!!!>,
+        )
+        if not r.status_code == 200:
+            raise Exception(
+                "Incorrect reply from Webex Teams API. Status code: {}".format(r.status_code)
+            )
